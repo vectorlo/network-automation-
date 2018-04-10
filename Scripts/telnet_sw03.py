@@ -9,7 +9,7 @@ password = getpass.getpass("Password:")
 
 for n in range(1,11):
     host = "10.0.0.0 %s" % n
-    tn = telnetlib.Telnet(HOST)
+    tn = telnetlib.Telnet(host)
 
     tn.read_until(b"Username: ")
     tn.write(user.encode('ascii') + b"\n")
