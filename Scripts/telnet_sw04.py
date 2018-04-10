@@ -4,7 +4,6 @@
 import getpass
 import telnetlib
 
-
 user = input("Enter your username:")
 password = getpass.getpass("password:")
 
@@ -30,5 +29,4 @@ with open("switchs_info.txt", "r") as f:
 
         tn.write(b"end\n")
         tn.write(b"exit\n")
-
         print(tn.read_all().decode('ascii'))
