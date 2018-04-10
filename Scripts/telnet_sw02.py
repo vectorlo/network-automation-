@@ -22,9 +22,9 @@ tn.write(b"conf t\n")
 
 for n in range(2,11):
     vlan = "vlan %s" % n
-    res = "name Python_VLAN %s" % n
+    desc = "name Python_VLAN %s" % n
     tn.write(vlan.encode('ascii') + b"\n")
-    tn.write(res.encode('ascii') + b"\n")
+    tn.write(desc.encode('ascii') + b"\n")
 
 tn.write(b"end\n")
 tn.write(b"exit\n")
