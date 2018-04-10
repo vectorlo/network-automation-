@@ -22,7 +22,7 @@ tn.write(b"conf t\n")
 
 for n in range(2,11):
     vlan = "vlan %s" % n
-    res = "name Python_VLAN %s' % n"
+    res = "name Python_VLAN %s" % n
     tn.write(b"vlan\n" )
     tn.write(b"res\n")
 
