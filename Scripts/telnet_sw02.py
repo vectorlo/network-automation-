@@ -21,8 +21,10 @@ tn.write(b"cisco\n")
 tn.write(b"conf t\n")
 
 for n in range(2,11):
-    tn.write(b"'vlan %s\n' % n" )
-    tn.write(b"'name Python_VLAN %s\n' % n")
+    vlan = "vlan %s" % n
+    res = "name Python_VLAN %s' % n"
+    tn.write(b"vlan\n" )
+    tn.write(b"res\n")
 
 tn.write(b"end\n")
 tn.write(b"exit\n")
