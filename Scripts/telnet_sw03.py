@@ -22,7 +22,7 @@ for n in range(1,11):
     tn.write(b"cisco\n")
     for n in range(2,11):
         vlan = "vlan %s" % n
-        desc = "name Python_VLAN %s" % n
+        desc = "name Python_VLAN%s" % n
         tn.write(vlan.encode('ascii') + b"\n")
         tn.write(desc.encode('ascii') + b"\n")
     tn.write(b"end\n")
