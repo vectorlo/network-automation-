@@ -4,8 +4,8 @@
 import getpass
 import telnetlib
 
-user = "cisco"
-password = "cisco"
+user = input("Enter your username:")
+password = getpass.getpass("Password:")
 
 for n in range(1,11):
     host = "10.0.0.0 %s" % n
@@ -23,8 +23,8 @@ for n in range(1,11):
     	vlan = "vlan %s" % n
     	desc = "name Python_VLAN %s" % n
     	tn.write(vlan.encode('ascii') + b"\n")
-		tn.write(desc.encode('ascii') + b"\n")
-	tn.write(b"end\n")
-	tn.write(b"exit\n")
-
-	print(tn.read_all().decode('ascii'))
+	tn.write(desc.encode('ascii') + b"\n")
+    tn.write(b"end\n")
+    tn.write(b"exit\n")
+	
+    print(tn.read_all().decode('ascii'))
