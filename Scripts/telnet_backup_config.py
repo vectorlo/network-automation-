@@ -22,7 +22,7 @@ with open("switchs_info.txt", "r") as f:
 
         tn.write(b"enable\n")
         tn.write(b"cisco\n")
-        tn.write(b"terminal lenth 0\n")
+        tn.write(b"terminal length 0\n")
         tn.write(b"show run\n")
         tn.write(b"exit\n")
         
