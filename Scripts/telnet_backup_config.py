@@ -28,7 +28,7 @@ with open("switchs_info.txt", "r") as f:
         
         readoutput = tn.read_all().decode('ascii')
         file = "%s.txt" %host
-        saveoutput = open("file", "w")
+        saveoutput = open(file, "w")
         saveoutput.write(readoutput)
         saveoutput.close()
         
